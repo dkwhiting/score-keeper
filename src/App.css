@@ -1,0 +1,43 @@
+#App {
+  width: 400px;
+}
+
+.setup {
+  text-align: center;
+}
+
+.setup form {
+  display: flex;
+  padding: 20px;
+}
+
+.setup input {
+  width: 100%;
+  flex: 1;
+  font-size: 25px;
+}
+
+.players {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.player {
+  font-size: 30px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px;
+  border-bottom: 1px solid grey;
+}
+
+.player button {
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  color: white;
+  font-weight: bolder;
+  font-size: 25px;
+  border: 0;
+  border-radius: 50%;
+}
