@@ -34,7 +34,7 @@ const EditScore = ({ players, setPlayers, currentPlayer, setCurrentPlayer }) => 
     <div className="edit-score">
       <h1>{currentPlayer.name}</h1>
       <h2>Score: {currentPlayer.score}</h2>
-      <input value={newScore} onChange={(event) => setNewScore(event.target.value)}></input>
+      <input value={newScore} maxlength="3" onChange={(event) => setNewScore(event.target.value)}></input>
       <div className="edit-buttons">
 
         <button className="add" onClick={() => addHandler()}>+</button>

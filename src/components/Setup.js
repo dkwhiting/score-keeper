@@ -29,24 +29,24 @@ const Setup = ({ players, setPlayers }) => {
 
   return (
     <div className="setup">
-      <NavLink to="scoreboard"><button>Start Game</button></NavLink>
-      <form onSubmit={(event) => submitHandler(event)}>
+      <div className="setup-body">
 
-        <div className="input">
-          <input
-            value={newPlayer}
-            type="text"
-            onChange={(event) => setNewPlayer(event.target.value)} />
-        </div>
-        <div className="button">
+        <form onSubmit={(event) => submitHandler(event)}>
 
-          <button type="submit">Add</button>
-        </div>
-      </form>
-      <div className="players">
+          <div className="input">
+            <input
+              value={newPlayer}
+              type="text"
+              onChange={(event) => setNewPlayer(event.target.value)} />
+          </div>
+          <div className="button">
 
-        {
-          players
+            <button type="submit">Add</button>
+          </div>
+        </form>
+        <div className="players">
+
+          {players.length > 0
             ? players.map((player, index) => {
               return <div key={index} className="player">
                 <div className="name">{player.name}</div>
@@ -54,9 +54,13 @@ const Setup = ({ players, setPlayers }) => {
 
               </div>
             })
-            : <></>
-        }
+            : <h1>Add Players to Begin!</h1>
+          }
+        </div>
       </div>
+      <NavLink to="scoreboard">
+        <div className="start-game"><button>Start Game</button></div>
+      </NavLink>
     </div >
   );
 }

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { NavLink } from 'react-router-dom';
 import EditScore from './EditScore';
 import SinglePlayer from "./SinglePlayer";
 
@@ -9,19 +10,31 @@ const Scoreboard = ({ players, setPlayers }) => {
 
   return (
     <div className="scoreboard">
+      <div className="scores">
+        {
+          !currentPlayer
+            ? players.length > 0
+              ? players.map((player, index) => {
 
-      {
-        !currentPlayer
-          ? players
-            ? players.map((player, index) => {
+                return (
+                  <SinglePlayer player={player} index={index} setCurrentPlayer={setCurrentPlayer} />
+                )
+              })
+              : <h1>Add Players to Begin!</h1>
+            : <EditScore players={players} setPlayers={setPlayers} currentPlayer={currentPlayer} setCurrentPlayer={setCurrentPlayer} />
+        }
+      </div>
+      <div className="edit-players">
+        <NavLink
+          to="/" >
 
-              return (
-                <SinglePlayer player={player} index={index} setCurrentPlayer={setCurrentPlayer} />
-              )
-            })
-            : <></>
-          : <EditScore players={players} setPlayers={setPlayers} currentPlayer={currentPlayer} setCurrentPlayer={setCurrentPlayer} />
-      }
+          {players.length > 0
+            ? <button>Edit Players</button>
+            : <button>Add Players</button>
+          }
+
+        </NavLink>
+      </div>
     </div>
   );
 }

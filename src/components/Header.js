@@ -4,14 +4,7 @@ import { NavLink } from 'react-router-dom';
 const Header = () => {
   return (
     <div className="header">
-      <div className="edit-button">
-        <NavLink
-          to="/" >
-          <button>
-            Edit players
-          </button>
-        </NavLink>
-      </div>
+      <h1>score-keeper</h1>
     </div>
   );
 }
