@@ -115,12 +115,13 @@
 }
 
 .player button {
+  font-family: monospace;
   width: 30px;
   height: 30px;
   background-color: red;
   color: white;
   font-weight: bolder;
-  font-size: 25px;
+  font-size: 20px;
   border: 0;
   border-radius: 50%;
 }
@@ -151,7 +152,7 @@
 .edit-players button,
 .start-game button {
   font-size: 30px;
-  background-color: rgb(166, 228, 248);
+  background-color: rgb(234, 138, 138);
   border: 0;
   border-radius: 20px;
   padding: 5px 15px;

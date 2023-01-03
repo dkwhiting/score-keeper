@@ -25,15 +25,16 @@ const Scoreboard = ({ players, setPlayers }) => {
         }
       </div>
       <div className="edit-players">
-        <NavLink
-          to="/" >
-
-          {players.length > 0
-            ? <button>Edit Players</button>
-            : <button>Add Players</button>
-          }
-
-        </NavLink>
+        {!currentPlayer
+          ? <NavLink
+            to="/" >
+            {players.length > 0
+              ? <button>Edit Players</button>
+              : <button>Add Players</button>
+            }
+          </NavLink>
+          : <></>
+        }
       </div>
     </div>
   );

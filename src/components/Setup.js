@@ -58,7 +58,7 @@ const Setup = ({ players, setPlayers }) => {
           }
         </div>
       </div>
-      <NavLink to="scoreboard">
+      <NavLink to="/scoreboard">
         <div className="start-game"><button>Start Game</button></div>
       </NavLink>
     </div >
