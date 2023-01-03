@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 const EditScore = ({ players, setPlayers, currentPlayer, setCurrentPlayer }) => {
-  const [newScore, setNewScore] = useState(0)
+  const [newScore, setNewScore] = useState('')
 
   const addHandler = () => {
     const editPlayers = [...players]
@@ -32,12 +32,15 @@ const EditScore = ({ players, setPlayers, currentPlayer, setCurrentPlayer }) => 
 
   return (
     <div className="edit-score">
-      {currentPlayer.name}
-      Current Score: {currentPlayer.score}
+      <h1>{currentPlayer.name}</h1>
+      <h2>Score: {currentPlayer.score}</h2>
       <input value={newScore} onChange={(event) => setNewScore(event.target.value)}></input>
-      <button onClick={() => addHandler()}>+</button>
-      <button onClick={() => subHandler()}>-</button>
-      <button onClick={() => setCurrentPlayer(null)}>Reset</button>
+      <div className="edit-buttons">
+
+        <button className="add" onClick={() => addHandler()}>+</button>
+        <button className="subtract" onClick={() => subHandler()}>-</button>
+      </div>
+      <button onClick={() => setCurrentPlayer(null)}>Go Back</button>
     </div>
   );
 }
