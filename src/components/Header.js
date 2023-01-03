@@ -1,9 +1,17 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <div className="Header">
-      Header
+    <div className="header">
+      <div className="edit-button">
+        <NavLink
+          to="/" >
+          <button>
+            Edit players
+          </button>
+        </NavLink>
+      </div>
     </div>
   );
 }

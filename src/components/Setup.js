@@ -22,7 +22,7 @@ const Setup = ({ players, setPlayers }) => {
     if (players) {
       newPlayerList = [...players]
     }
-    newPlayerList.push(newPlayer)
+    newPlayerList.push({ 'name': newPlayer, 'score': 0 })
     setPlayers(newPlayerList)
     setNewPlayer('')
   }
@@ -31,11 +31,17 @@ const Setup = ({ players, setPlayers }) => {
     <div className="setup">
       <NavLink to="scoreboard"><button>Start Game</button></NavLink>
       <form onSubmit={(event) => submitHandler(event)}>
-        <input
-          value={newPlayer}
-          type="text"
-          onChange={(event) => setNewPlayer(event.target.value)} />
-        <button type="submit">Add Player</button>
+
+        <div className="input">
+          <input
+            value={newPlayer}
+            type="text"
+            onChange={(event) => setNewPlayer(event.target.value)} />
+        </div>
+        <div className="button">
+
+          <button type="submit">Add</button>
+        </div>
       </form>
       <div className="players">
 
@@ -43,7 +49,7 @@ const Setup = ({ players, setPlayers }) => {
           players
             ? players.map((player, index) => {
               return <div key={index} className="player">
-                <div className="name">{player}</div>
+                <div className="name">{player.name}</div>
                 <button onClick={() => removePlayer(index)}> X</button>
 
               </div>

@@ -1,19 +1,26 @@
-// import React, { useState } from 'react'
+import React, { useState } from 'react'
+import EditScore from './EditScore';
+import SinglePlayer from "./SinglePlayer";
 
-// import SinglePlayer from './SinglePlayer';
+
 
 const Scoreboard = ({ players, setPlayers }) => {
+  const [currentPlayer, setCurrentPlayer] = useState(null)
 
   return (
-    <div className="Scoreboard">
+    <div className="scoreboard">
+
       {
-        players
-          ? players.map(player => {
-            return (
-              <div>{player}</div>
-            )
-          })
-          : <></>
+        !currentPlayer
+          ? players
+            ? players.map((player, index) => {
+
+              return (
+                <SinglePlayer player={player} index={index} setCurrentPlayer={setCurrentPlayer} />
+              )
+            })
+            : <></>
+          : <EditScore players={players} setPlayers={setPlayers} currentPlayer={currentPlayer} setCurrentPlayer={setCurrentPlayer} />
       }
     </div>
   );
