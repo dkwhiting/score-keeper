@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/score-keeper/static/css/main.b1ca2a0b.css",
-    "main.js": "/score-keeper/static/js/main.5d1eb0de.js",
+    "main.css": "/score-keeper/static/css/main.ffc7cf6e.css",
+    "main.js": "/score-keeper/static/js/main.c2416838.js",
     "index.html": "/score-keeper/index.html",
-    "main.b1ca2a0b.css.map": "/score-keeper/static/css/main.b1ca2a0b.css.map",
-    "main.5d1eb0de.js.map": "/score-keeper/static/js/main.5d1eb0de.js.map"
+    "main.ffc7cf6e.css.map": "/score-keeper/static/css/main.ffc7cf6e.css.map",
+    "main.c2416838.js.map": "/score-keeper/static/js/main.c2416838.js.map"
   },
   "entrypoints": [
-    "static/css/main.b1ca2a0b.css",
-    "static/js/main.5d1eb0de.js"
+    "static/css/main.ffc7cf6e.css",
+    "static/js/main.c2416838.js"
   ]
 }
