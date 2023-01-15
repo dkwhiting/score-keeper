@@ -7,7 +7,6 @@ const Setup = ({ players, setPlayers }) => {
 
   useEffect(() => {
     localStorage.setItem('players', JSON.stringify(players))
-
   }, [players])
 
   const removePlayer = (index) => {
@@ -46,7 +45,7 @@ const Setup = ({ players, setPlayers }) => {
         </form>
         <div className="players">
 
-          {players.length > 0
+          {players && players.length > 0
             ? players.map((player, index) => {
               return <div key={index} className="player">
                 <div className="name">{player.name}</div>

@@ -16,7 +16,7 @@ const View = () => {
         element={<Setup players={players} setPlayers={setPlayers} />}
       />
       <Route
-        exact path="/scoreboard"
+        exact path="scoreboard"
         element={<Scoreboard players={players} setPlayers={setPlayers} />}
       />
     </Routes>

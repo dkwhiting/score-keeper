@@ -17,7 +17,7 @@ const Scoreboard = ({ players, setPlayers }) => {
               ? players.map((player, index) => {
 
                 return (
-                  <SinglePlayer player={player} index={index} setCurrentPlayer={setCurrentPlayer} />
+                  <SinglePlayer player={player} index={index} setCurrentPlayer={setCurrentPlayer} key={index} />
                 )
               })
               : <h1>Add Players to Begin!</h1>
