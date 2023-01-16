@@ -12,11 +12,11 @@ const View = () => {
   return (
     <Routes>
       <Route
-        exact path="/"
+        exact path="score-keeper/"
         element={<Setup players={players} setPlayers={setPlayers} />}
       />
       <Route
-        exact path="scoreboard"
+        exact path="score-keeper/scoreboard"
         element={<Scoreboard players={players} setPlayers={setPlayers} />}
       />
     </Routes>
