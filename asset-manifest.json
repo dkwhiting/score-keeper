@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/score-keeper/static/css/main.9d0f67bc.css",
+    "main.js": "/score-keeper/static/js/main.2c7f3d31.js",
+    "index.html": "/score-keeper/index.html",
+    "main.9d0f67bc.css.map": "/score-keeper/static/css/main.9d0f67bc.css.map",
+    "main.2c7f3d31.js.map": "/score-keeper/static/js/main.2c7f3d31.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9d0f67bc.css",
+    "static/js/main.2c7f3d31.js"
+  ]
+}
