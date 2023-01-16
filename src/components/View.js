@@ -5,6 +5,7 @@ import {
 } from 'react-router-dom'
 import Scoreboard from './Scoreboard';
 import Setup from './Setup';
+import NotFound from './NotFound';
 
 const View = () => {
   const [players, setPlayers] = useState(JSON.parse(localStorage.getItem('players')))
@@ -12,12 +13,16 @@ const View = () => {
   return (
     <Routes>
       <Route
-        exact path="score-keeper/"
+        exact path="/"
         element={<Setup players={players} setPlayers={setPlayers} />}
       />
       <Route
         exact path="score-keeper/scoreboard"
         element={<Scoreboard players={players} setPlayers={setPlayers} />}
+      />
+      <Route
+        exact path="/*"
+        element={<NotFound />}
       />
     </Routes>
   );
