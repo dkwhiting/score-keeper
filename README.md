@@ -7,8 +7,6 @@ This is a simple score keeping website made using React. The website allows user
 - Add and remove players
 - Increase or decrease player scores
 - Reset all scores
-- Ability to change the title of the scoreboard
-- Displays the highest score and the player who achieved it
 
 ## Installation
 
